@@ -1,0 +1,126 @@
+.body{
+    background:#ffffff;
+} 
+ul{
+    padding: 0px;
+    margin: 0px;
+    list-style: none;
+}
+ 
+#content{
+    margin-top: 100px;
+     
+}
+#content .myproducts li{
+    position: relative;
+    list-style: none;
+    margin: 20px 0px;
+        border: 2px solid lightgrey;
+    padding: 10px 10px;
+        background: white;
+    border-radius: 10px;
+}
+#content .myproducts li .product .productimage{
+    width: 20%;
+}
+#content .myproducts li .product .productimage img{
+    width: 100%;
+}
+#content .myproducts li .product{
+    display: flex;
+}
+#content .myproducts li .product button{
+        border-radius:30px;
+    border: none;
+    /* padding: 5px; */
+    font-size: 20px;
+    /* border: 1px solid lightgrey; */ 
+}
+#content .myproducts ul{
+   margin-left: 50px;
+}
+.form-group{
+    text-align:center;
+    font-family:"Sans",Verdana,"sans-serif";
+
+}
+#content .myproducts li .product button:focus{
+outline: none;
+    
+}
+#content .myproducts li .product .deleteimage{
+      position: absolute;
+    right: -12px;
+    top: 11px;
+}
+#content .myproducts li .product .deleteimage img{
+    width: 55%;
+}
+#content .myproducts li .productdescription{
+    margin-left: 30px;
+}
+#content .form{
+        margin-top: 50px;
+}
+#content .form input[type="submit"]{
+    border-radius: 5px;
+    border: none;
+    border: 1px solid #d3d3d3;
+    padding: 5px 10px;
+    background:#e50000;
+}
+#content .amount{
+    margin-right: 50px;
+    text-align: center;
+     
+    margin-top: 20px;
+    border-radius: 10px;
+    padding-bottom:90px;
+    padding-top:5px;
+     
+     
+}
+.form{
+    color:#ffffff;
+}
+#content .empty{
+    text-transform: capitalize;
+    color: red;
+    text-align: center;
+    
+}
+/*content media*/
+@media(max-width:992px){
+    #content .productdescription input[type="text"]{
+        width: 60%;
+    }
+    #content .productdescription span{
+        font-size: 14px;
+    }
+}
+@media(max-width:767px){
+    #content .myproducts li .product .productimage{
+    width: 26%;
+}
+}
+@media(max-width:640px){
+    #content .myproducts li .product .productimage img{
+        margin-top: 15px;
+    }
+       #content .myproducts li .product .productimage{
+    width: 30%;
+           
+}
+     #content .productdescription input[type="text"]{
+        width: 50%;
+    }
+}
+@media(max-width:576px){
+    #content .myproducts li{
+        width: 94%;
+        margin: 20px -20px;
+    }
+    #content .amount{
+        margin: 0px 60px;
+    }
+}

@@ -1,0 +1,175 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Halanx</title>
+<meta content="width=device-width, initial-scale=1.0" name="viewport" >
+ <link rel="icon" type="image/png" sizes="16x16" href="logo.png">
+ <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+ <link rel="stylesheet" href="fav.css">
+<script src="angular.min.js"></script>
+<script src="../js/module.js"></script>
+<script src="module.js"></script>
+<script src="factory.js"></script>
+<script src="controller.js"></script>
+ 
+</head>
+<body ng-app="myapp2" ng-controller="myctrl" data-spy="scroll" data-target="#myScrollspy">
+  <div id="container">
+   <nav class="navbar navbar-fixed-top" role="navigation">
+    <div class="container-fluid">
+        <!-- add header -->
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar1">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="../../../index.html"><img src="https://s3-us-west-2.amazonaws.com/halanx-web/logo.png" class="img-responsive img-circle" width="50" height="50"> </a>
+            <a class="navbar-brand navbar-bg" href="../../../index.html">Halanx</a>
+        </div>
+        <!-- menu items -->
+        <div class="collapse navbar-collapse" id="navbar1">
+            <ul class="nav navbar-nav navbar-right">
+               <button class="btn btn-danger btn-md pull-right" onclick="window.location='../../../index.html'"> Logout</button>
+                
+            </ul>
+        </div>
+    </div>
+   
+</nav> 
+<div id="content" name="toTop" id="toPos">
+    <div class="container-fluid" name="toTop" id="toPos">
+        <div class="row">
+            <div class="col-sm-12">
+                <div class="favlist">
+                    <h1 class="new">Favourites</h1>
+                    <ul>
+                        <li ng-repeat="i in arr">
+                           
+                            <img ng-src="{{i.ProductImage}}" alt="" height="50" width="250" class="responsive">
+                            <br>
+                            <span>{{i.ProductName}}</span>
+                            <span>{{i.ProductPrice}}</span>
+                            <br>
+                            <button ng-click="add(i)" class="btn btn-md btn-danger b1">Add to Cart</button>
+                        </li>
+                    </ul>
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+ </div>
+
+
+<div class="container-fluid bg18">
+  <div class="row row_11">
+    <div class="col-md-2 col-sm-8 col-xs-12 text-center"><a href="../../../aboutus.html">About Us</a></div>
+    <div class="col-md-2 col-sm-8 col-xs-12 text-center"><a href="#">Careers</a></div>
+    <div class="col-md-2 col-sm-8 col-xs-12 text-center"><a href="#">Blog</a></div>
+    <div class="col-md-2 col-sm-8 col-xs-12 text-center"><a href="../../../contactus.html">Contact Us</a></div>
+    <div class="col-md-2 col-sm-8 col-xs-12 text-center"><a href="../../../terms.html">Terms</a></div>
+    <div class="col-md-2 col-sm-8 col-xs-12 text-center"><a href="../../../privacy.html">Privacy</a></div>
+  </div>
+
+  <div class="row row_13">
+    <div class="text-center center-block">
+      <a href="https://www.facebook.com/halanxtech"><i id="social-fb" class="fa fa-facebook-square fa-2x social"></i></a>
+      <a href="https://www.twitter.com/halanxtech"><i id="social-tw" class="fa fa-twitter-square fa-2x social"></i></a>
+      <a href="https://www.instagram.com/halanxtech"><i id="social-gp" class="fa fa-instagram fa-2x social"></i></a>
+       <a href="https://in.linkedin.com/company/halanx"><i id="social-tw" class="fa fa-linkedin-square fa-2x social"></i></a>
+
+
+   </div>
+  </div>
+
+
+   <div class="row row_12">
+  <span class="glyphicon glyphicon-copyright-mark"> Halanx 2017 </span>
+   </div>
+</div>
+</body>
+<script>
+ $(function(){
+    var navbar = $('.navbar');
+    $(window).scroll(function(){
+        if($(window).scrollTop() <= 40){
+          navbar.css('box-shadow', 'none');
+        } else {
+          navbar.css('box-shadow', '0px 4px 20px rgba(0, 0, 0, 0.3)'); 
+        }
+    });  
+})
+$(function(){
+
+  // name your elements here
+  var stickyElement   = '.panel-affix',   // the element you want to make sticky
+    bottomElement   = '#fake-footer'; // the bottom element where you want the sticky element to stop (usually the footer) 
+
+  // make sure the element exists on the page before trying to initalize
+  if($( stickyElement ).length){
+    $( stickyElement ).each(function(){
+
+      // let's save some messy code in clean variables
+      // when should we start affixing? (the amount of pixels to the top from the element)
+      var fromTop = $( this ).offset().top, 
+        // where is the bottom of the element?
+        fromBottom = $( document ).height()-($( this ).offset().top + $( this ).outerHeight()),
+        // where should we stop? (the amount of pixels from the top where the bottom element is)
+        // also add the outer height mismatch to the height of the element to account for padding and borders
+        stopOn = $( document ).height()-( $( bottomElement ).offset().top)+($( this ).outerHeight() - $( this ).height()); 
+
+      // if the element doesn't need to get sticky, then skip it so it won't mess up your layout
+      if( (fromBottom-stopOn) > 200 ){
+        // let's put a sticky width on the element and assign it to the top
+        $( this ).css('width', $( this ).width()).css('top', 0).css('position', '');
+        // assign the affix to the element
+        $( this ).affix({
+          offset: { 
+            // make it stick where the top pixel of the element is
+            top: fromTop - 80,  
+            // make it stop where the top pixel of the bottom element is
+            bottom: stopOn
+          }
+        // when the affix get's called then make sure the position is the default (fixed) and it's at the top
+        }).on('affix.bs.affix', function(){ $( this ).css('top', '80px').css('position', ''); });
+      }
+      // trigger the scroll event so it always activates 
+      $( window ).trigger('scroll'); 
+    }); 
+  }
+
+});
+
+//Offset scrollspy height to highlight li elements at good window height
+$('body').scrollspy({
+  offset: 80
+});
+
+//Smooth Scrolling For Internal Page Links
+$(function() {
+  $('a[href*=#]:not([href=#])').click(function() {
+  if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
+    var target = $(this.hash);
+    target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
+    if (target.length) {
+    $('html,body').animate({
+      scrollTop: target.offset().top
+    }, 1000);
+    return false;
+    }
+  }
+  });
+});
+
+
+
+ </script>
+</html>

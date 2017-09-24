@@ -1,0 +1,43 @@
+.navbar-fixed-top{
+    background-color:#ffffff;
+}
+.img-responsive{
+  	 margin-top: -10px;
+}
+.modal-header{
+	background : #c0392b;
+}
+.navbar-right{
+  	color: #ff0000;
+  	font-family:"Sans",Verdana,"sans-serif";
+  	font-weight:bold;
+}
+.navbar-bg{
+   	color: #e50000;
+  	font-family: "Sans",Verdana,"sans-serif";
+  	font-weight:bold;
+  	font-size:2.5em;
+}
+	a.navbar-brand.navbar-bg {
+	font-size: 2.5em;
+	font-weight:bold;
+	}
+.pull-right{
+  padding-left: 20px;
+	padding-right: 9px;
+	margin-right: 10px;
+	margin-top:8px;
+}
+.row_2{
+  font-family:"Sans",Verdana,"sans-serif";
+  font-weight:bold;
+  font-size:1em;
+}
+.row_3{
+  font-family:"Sans",Verdana,"sans-serif";
+  font-weight:bold;
+  font-size:1em;
+}
+.bg10{
+  margin-top:50px;
+}

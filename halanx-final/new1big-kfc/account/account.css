@@ -1,0 +1,115 @@
+.navbar-fixed-top{
+    background-color:#ffffff;
+}
+.bg11{
+	margin-top:150px;
+}
+.img-responsive{
+  	 margin-top: -10px;
+}
+.row_11{
+	 padding-top:-250px;
+}
+.navbar-right{
+  	color: #ff0000;
+  	font-family:"Sans",Verdana,"sans-serif";
+  	font-weight:bold;
+}
+.navbar-bg{
+   	color: #e50000;
+  	font-family: "Sans",Verdana,"sans-serif";
+  	font-weight:bold;
+  	font-size:2.5em;
+}
+.pull-right{
+	padding-right: 9px;
+	margin-right: 10px;
+	margin-top:8px;
+}
+
+.right{
+	margin-top:8px;
+}
+#content{
+    margin-top: 80px;
+}
+.bg3{
+  margin-top:250px;
+  width:100%;
+}
+.col-md-2{
+	color:#000000;
+	font-family:ff-clan-web-pro,"Helvetica Neue",Helvetica,sans-serif;
+	font-size:1em;
+	cursor:hand;
+ text-decoration:none;
+}
+.col-md-2 a{
+	color:#000000;
+}
+.col-md-2 a:hover{
+	text-decoration:none;
+	color:#ff0000;
+}
+.col-md-2 a{
+/*	color:#000000;*/
+    color: white;
+    font-size: 15px;
+	cursor:pointer;
+}
+.row_13{
+ 	background:#000000;
+ 	margin-bottom:0px;
+ margin-top:0px;
+ }
+.row_13 i{
+    color: white;
+}
+.row_109{
+    padding-top: 10px;
+    padding-bottom: 10px;
+    font-size:1em;
+  
+     margin-bottom:0px;
+/*  background:#ffffff;*/
+    background: black;
+    font-family:ff-clan-web-pro,"Helvetica Neue",Helvetica,sans-serif;
+    text-decoration:none;
+    color:white;
+
+}
+.row_101{
+	background-color: #000000;
+	color:#ffffff;
+	font-size:15px;
+	font-family:ff-clan-web-pro,"Helvetica Neue",Helvetica,sans-serif;
+	text-align: center;
+	padding-top:0px;
+	margin-bottom:0px;
+}
+.social:hover {
+     -webkit-transform: scale(1.1);
+     -moz-transform: scale(1.1);
+     -o-transform: scale(1.1);
+ }
+ .social {
+     -webkit-transform: scale(0.8);
+     -moz-transform: scale(0.8);
+     -o-transform: scale(0.8);
+     -webkit-transition-duration: 0.5s;
+     -moz-transition-duration: 0.5s;
+     -o-transition-duration: 0.5s;
+ }
+ #social-fb:hover {
+     color: #3B5998;
+ }
+ #social-tw:hover {
+     color: #4099FF;
+ }
+ #social-gp:hover {
+     color: #d34836;
+ }
+ #social-em:hover {
+     color: #f39c12;
+ }
+ 

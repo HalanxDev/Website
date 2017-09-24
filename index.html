@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Halanx </title>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <meta charset="UTF-8">
+  <meta http-equiv="Content-Type" content="text/html" charset="utf-8" />
+  <title>Halanx</title>
+  <meta name="robots" content="index,follow">
+  <meta name="description" content="Get groceries and meals delivered from your favourite store and restaurant in as little as an hour.">
+  <meta name="keywords" content="groceries,foods,meals">
+  <link rel="icon" type="image/png" sizes="16x16" href="logo.png">
+  <meta name="theme-color" content="#ffffff">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Droid+Sans" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Montserrat|PT+Sans" rel="stylesheet">
+  <link rel="canonical" href="http://www.halanx.com/" />
+  <meta name="robots" content="en_GB" />
+  <meta property="og:type" content="website" />
+  <meta property="og:description" content="Halanx" />
+  <meta property="og:url" content="http://halanx.com" />
+  <meta property="og:site_name" content="Halanx">
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:description" content="Get groceries and meals delivered from your favourite store and restaurant is as little as an hour"
+  />
+  <meta name="twitter:title" content="Halanx">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="panel.css">
+  <style>
+    .icon-bar {
+      background-color: #d6d6d6;
+    }
+     .class1{
+       margin-left:210px;
+       margin-top:10px;
+     }
+     @media(max-width:380px){
+       .class1{
+         margin-left:100px;
+       }
+     }
+        #mapholder {
+        width: 550px;
+        height: 200px;
+          }
+    
+      @media(max-width:380px) {
+      #mapholder {
+        width: 280px;
+        height: 200px;
+         
+      }
+    }
+
+     
+
+    .new_0 {
+      color: #ffffff;
+      margin-right: 20px;
+    }
+  </style>
+</head>
+
+<body data-spy="scroll" data-target="#myScrollspy">
+
+
+  <nav class="navbar navbar-fixed-top" role="navigation">
+    <div class="container-fluid">
+      <!-- add header -->
+      <div class="navbar-header">
+
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar1">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+      </button>
+        <a class="navbar-brand" href="index.html"><img src="https://s3-us-west-2.amazonaws.com/halanx-web/logo.png" class="img-responsive img-circle" width="50" height="50"> </a>
+        <a class="navbar-brand navbar-bg" href="index.html">Halanx</a>
+      </div>
+
+
+      <!-- menu items -->
+      <div class="collapse navbar-collapse" id="navbar1">
+        <ul class="nav navbar-nav navbar-right">
+          <button class="btn btn-danger btn-md pull-right" onclick="window.location='halanx-final/new1big-kfc/frontpage/login.html'"> Login</button>
+
+        </ul>
+      </div>
+
+    </div>
+  </nav>
+
+  <div class="container-fluid bg1" name="toTop" id="toPos">
+    <div class="shadow"></div>
+    <!--
+<div class="row row_1">
+<div class="col-sm-12">
+Everyone's Personal Shopper
+</div>
+</div>
+-->
+    <div class="row row_2">
+      <div class="col-sm-12">
+        <h1>Get grocery and food delivered from your favourite store and restaurant in as little as an hour!</h1>
+      </div>
+    </div>
+
+    <div class="row row_3">
+      <div class="col-md-8 col-md-offset-1">
+        <div id="custom-search-input">
+          <div class="input-group col-md-offset-3">
+            <span id="pac-container">
+
+                  <input type="text" id="txtPlaces" class="form-control input-md" placeholder="Enter your location" />
+
+              </span>
+            <span class="input-group-btn">
+                    
+                  <button class="btn btn-danger btn-md" type="button" id="search">
+                      <i class="glyphicon glyphicon-search" onclick="window.location='halanx-final/new1big-kfc/frontpage/index1.html'"></i>
+                  </button>
+              </span>
+          </div>
+
+
+
+
+        </div>
+      </div>
+    </div>
+
+
+    <p id="demo" class="newn1">
+      <center class="newn1">Detect current location<span class="glyphicon glyphicon-screenshot" onclick="getLocation()" data-toggle="modal" data-target="#myModal"></center></p>
+
+<div class="modal fade" id="myModal" role="dialog">
+<div class="modal-dialog modal-md">
+
+<div class="modal-content">
+
+<div class="modal-header">Your Location
+<button type="button" class="close" data-dismiss="modal">&times;</button>
+</div>
+<div class="modal-body">
+<div class="">
+<div id="mapholder"></div>
+<script src="https://maps.google.com/maps/api/js?sensor=true&key=AIzaSyBKlaIxOl1ps19NOR6kcuTbUF9aqyLD984"></script>
+<script>
+var x = document.getElementById("demo");
+function getLocation() {
+if (navigator.geolocation) {
+  navigator.geolocation.getCurrentPosition(showPosition, showError);
+} else { 
+  x.innerHTML = "Geolocation is not supported by this browser.";
+}
+}
+
+function showPosition(position) {
+lat = position.coords.latitude;
+lon = position.coords.longitude;
+localStorage.setItem('lat',lat);
+localStorage.setItem('lon',lon);
+latlon = new google.maps.LatLng(lat, lon)
+mapholder = document.getElementById('mapholder')
+ 
+
+
+var myOptions = {
+center:latlon,zoom:14,
+mapTypeId:google.maps.MapTypeId.ROADMAP,
+mapTypeControl:false,
+
+navigationControlOptions:{style:google.maps.NavigationControlStyle.SMALL}
+}
+
+var map = new google.maps.Map(document.getElementById("mapholder"), myOptions);
+var marker = new google.maps.Marker({
+  position:latlon,
+  map:map,
+  draggable: true
+  
+  });
+   
+   google.maps.event.addListener(marker, 'dragend', function(ev){
+   alert(latlon.lat() + ' ' + latlon.lon());  
+   alert(marker.getPosition());  
+      localStorage.setItem('marker',marker.getPosition());
+});
+
+};
+
+
+
+function showError(error) {
+switch(error.code) {
+  case error.PERMISSION_DENIED:
+      x.innerHTML = "User denied the request for Geolocation."
+      break;
+  case error.POSITION_UNAVAILABLE:
+      x.innerHTML = "Location information is unavailable."
+      break;
+  case error.TIMEOUT:
+      x.innerHTML = "The request to get user location timed out."
+      break;
+  case error.UNKNOWN_ERROR:
+      x.innerHTML = "An unknown error occurred."
+      break;
+}
+}
+</script>
+<button type="button" class="btn btn-md btn-danger class1" id="class1" onclick="savedata()">Confirm Location</button>
+<script>
+function savedata(){
+var array=[lat,lon];
+localStorage.setItem('obj',array);
+
+window.location="https://www.halanx.com/halanx-final/new1big-kfc/frontpage/index1.html";
+
+}
+</script>
+
+</div>
+</div>
+</div>
+</div>
+</div>
+
+</div>
+</div>
+
+<div class="container-fluid bg2">
+
+<div class="col-md-4 upper1">
+<div class="image">
+<img class="user" src="areas%20we%20serve.png" alt="">
+</div>
+<div class="panel panel">
+  <div class="panel-heading">Areas We Serve</div>
+    <div class="panel-body">
+	    <div class="row row_100 text-center">Delhi</div>
+	    <div class="row row_100 text-center">Noida</div>
+	    <div class="row row_100 text-center">Gurgaon</div>
+    </div>
+  </div>
+</div>
+
+<div class="col-md-4 upper2">
+<div class="image">
+<img class="user" src="make%20money%20with%20us.png" alt="">
+
+  </div>
+<div class="panel panel">
+<div class="panel-heading">Make Money With Us</div>
+  <div class="panel-body">
+   
+    <div class="row row_102 text-center"><a href="shoppers/shopper.html">Become a Shopper</a></div>
+    <div class="row row_102 text-center"><a href="store/store.html">Get Your Store Listed</a></div>
+     
+  </div>
+</div>
+</div>
+
+<div class="col-md-4 upper3">
+<div class="image">
+<img class="user" src="download%20app.gif" alt="">
+  </div>
+<div class="panel panel">
+<div class="panel-heading">Download App</div>
+  <div class="panel-body">
+   
+    <div class="row row_103 text-center"><a href="https://play.google.com/store/apps/details?id=com.halanx.userapp">Android App on Playstore</a></div>
+    <div class="row row_104"><a href="https://play.google.com/store/apps/details?id=com.halanx.userapp"><center><img src="https://s3-us-west-2.amazonaws.com/halanx-web/en_badge_web_generic.png" class="img-responsive img1" height="90" width="100"></a></center></div>
+     
+  </div>
+</div>
+</div>
+
+
+</div>
+ 
+  <button class="btn btn-md btn-primary chatb">Chat with us</button>
+    <button type="button" class="btn btn-md btn-primary b6"><a href="https://m.me/halanxtech?ref=Welcome%20message">
+     <img src="facebook-messenger-300x300.jpg" class="img-responsive img-circle r2" width="50" />
+     
+ </a></button>
+ 
+</body>
+<script>
+  window.fbAsyncInit = function () {
+    FB.init({
+      appId: '305219616568944',
+      xfbml: true,
+      version: 'v2.6'
+    });
+  };
+
+  (function (d, s, id) {
+    var js, fjs = d.getElementsByTagName(s)[0];
+    if (d.getElementById(id)) { return; }
+    js = d.createElement(s); js.id = id;
+    js.src = "//connect.facebook.net/en_US/sdk.js";
+    fjs.parentNode.insertBefore(js, fjs);
+  }(document, 'script', 'facebook-jssdk'));
+</script>
+
+<div class="fb-messengermessageus" messenger_app_id="305219616568944" page_id="XYZ" color="blue" >
+  </div>
+</nav>
+</div>
+<div class="container-fluid bg3">
+<div class="row row_11">
+<div class="col-md-2   text-center"><a href="aboutus.html">About Us</a></div>
+<div class="col-md-2  text-center"><a href="#">Careers</a></div>
+<div class="col-md-2  text-center"><a href="#">Blog</a></div>
+<div class="col-md-2  text-center"><a href="contactus.html">Contact Us</a></div>
+<div class="col-md-2  text-center"><a href="privacy.html">Privacy</a></div>
+<div class="col-md-2 text-center"><a href="terms.html">Terms</a></div>
+</div>
+
+<div class="row row_13">
+<div class="text-center center-block">
+<a href="https://www.facebook.com/halanxtech"><i id="social-fb" class="fa fa-facebook-square fa-2x social"></i></a>
+<a href="https://www.twitter.com/halanxtech"><i id="social-tw" class="fa fa-twitter-square fa-2x social"></i></a>
+<a href="https://www.instagram.com/halanxtech"><i id="social-gp" class="fa fa-instagram fa-2x social"></i></a>
+ <a href="https://in.linkedin.com/company/halanx"><i id="social-tw" class="fa fa-linkedin-square fa-2x social"></i></a>
+
+
+</div>
+</div>
+
+<div class="row row_12">
+<span class="glyphicon glyphicon-copyright-mark"> Halanx 2017 </span>
+  </div>
+  </div>
+  <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDXnunhscL2jKBg62KkqAhJwSMXhDoN9DE&libraries=places"></script>
+  <script type="text/javascript">
+    google.maps.event.addDomListener(window, 'load', function () {
+      var places = new google.maps.places.Autocomplete(document.getElementById('txtPlaces'));
+      google.maps.event.addListener(places, 'place_changed', function () {
+        var place = places.getPlace();
+        var address = place.formatted_address;
+        var latitude = place.geometry.location.A;
+        var longitude = place.geometry.location.F;
+        localStorage.setItem('address', place.formatted_address);
+
+        /*  var mesg = "Address: " + address;
+          mesg += "\nLatitude: " + latitude;
+          mesg += "\nLongitude: " + longitude;
+          alert(mesg);*/
+      });
+    });
+  </script>
+
+</body>
+<script>
+  $(function () {
+    var navbar = $('.navbar');
+    $(window).scroll(function () {
+      if ($(window).scrollTop() <= 40) {
+        navbar.css('box-shadow', 'none');
+      } else {
+        navbar.css('box-shadow', '0px 4px 20px rgba(0, 0, 0, 0.3)');
+      }
+    });
+  })
+  $(function () {
+
+
+    var stickyElement = '.panel-affix',
+      bottomElement = '#fake-footer';
+
+
+    if ($(stickyElement).length) {
+      $(stickyElement).each(function () {
+
+
+        var fromTop = $(this).offset().top,
+
+          fromBottom = $(document).height() - ($(this).offset().top + $(this).outerHeight()),
+
+
+          stopOn = $(document).height() - ($(bottomElement).offset().top) + ($(this).outerHeight() - $(this).height());
+
+        if ((fromBottom - stopOn) > 200) {
+
+          $(this).css('width', $(this).width()).css('top', 0).css('position', '');
+
+          $(this).affix({
+            offset: {
+
+              top: fromTop - 80,
+
+              bottom: stopOn
+            }
+            // when the affix get's called then make sure the position is the default (fixed) and it's at the top
+          }).on('affix.bs.affix', function () {
+            $(this).css('top', '80px').css('position', '');
+          });
+        }
+
+        $(window).trigger('scroll');
+      });
+    }
+
+  });
+
+
+  $('body').scrollspy({
+    offset: 80
+  });
+
+  $(function () {
+    $('a[href*=#]:not([href=#])').click(function () {
+      if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') && location.hostname == this
+        .hostname) {
+        var target = $(this.hash);
+        target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
+        if (target.length) {
+          $('html,body').animate({
+            scrollTop: target.offset().top
+          }, 1000);
+          return false;
+        }
+      }
+    });
+  });
+</script>
+
+</html>

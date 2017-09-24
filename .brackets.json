@@ -1,0 +1,12 @@
+{
+    "jscodehints.detectedExclusions": [
+        "F:/clone page/Halanx-Newlayout-master/halanx-final/new1big-kfc/Maps-master/libs/angular.min.js",
+        "F:/clone page/Halanx-Newlayout-master/halanx-final/new1big-kfc/orders/module.js",
+        "F:/clone page/Halanx-Newlayout-master/halanx-final/new1big-kfc/orders/factory.js",
+        "F:/clone page/Halanx-Newlayout-master/halanx-final/new1big-kfc/frontpage/loginjs/factory.js",
+        "F:/clone page/Halanx-Newlayout-master/halanx-final/new1big-kfc/frontpage/js/factory.js",
+        "F:/clone page/Halanx-Newlayout-master/halanx-final/new1big-kfc/orders/controller.js",
+        "F:/clone page/Halanx-Newlayout-master/halanx-final/new1big-kfc/foodjs/controller.js",
+        "F:/clone page/Halanx-Newlayout-master/halanx-final/new1big-kfc/orders/angular.min.js"
+    ]
+}

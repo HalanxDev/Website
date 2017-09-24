@@ -1,0 +1,72 @@
+#content .kfclogo{
+    width: 30%;
+    margin-left: 30%;
+}
+#content .kfclogo img{
+    width: 100%;
+}
+
+#content .kfcsection li .productimage{
+    width: 70%;
+    
+    
+}
+#content .kfcsection span{
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 25px;
+}
+
+
+#content .kfcsection .addbutton button{
+        background-color: #fb641b;
+    border: none;
+    border-radius: 6px;
+    padding: 8px 20px;
+    margin-left: 20px;
+    
+    text-transform: uppercase;
+}
+#content .productkfc ul{
+    display: flex;
+    flex-wrap: wrap
+}
+
+#content .kfcsection li {
+/*    display: inline-block;*/
+/*    width: 25%;*/
+/*    padding: 20px 0px;*/
+    width: 250px;
+    margin: 20px;
+     height: 200px;
+
+    
+}
+
+#content .kfcsection li .productimage img{
+    width: 100%;
+}
+#content .kfcsection .productdescription span{
+    font-size: 16px;
+/*    margin-left: -80px;*/
+    color: #666;
+    font-weight: 500;
+    text-transform: capitalize;
+}
+
+
+/*modal*/
+.modal-content .nextimage{
+    text-align: center;
+}
+
+#content  .modal-content .nextimage img{
+    width: 65%;
+}
+#content  .modal-content span{
+    font-size: 22px;
+}
+#content  .modal-content .unit{
+    font-size: 17px;
+    color: lightgrey;
+}

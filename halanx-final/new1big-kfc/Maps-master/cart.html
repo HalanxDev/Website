@@ -1,0 +1,508 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Halanx</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" >
+    <link rel="icon" type="image/png" sizes="16x16" href="logo.png">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    
+    
+    <style>
+    .navbar-fixed-top{
+    background-color:#ffffff;
+}
+.img-responsive{
+  	 margin-top: -10px;
+}
+.modal-header{
+	background : #c0392b;
+}
+.navbar-right{
+  	color: #ff0000;
+  	font-family:"Sans",Verdana,"sans-serif";
+  	font-weight:bold;
+}
+.navbar-bg{
+   	color: #e50000;
+  	font-family: "Sans",Verdana,"sans-serif";
+  	font-weight:bold;
+  	font-size:2.5em;
+}
+.pull-right{
+  padding-left: 20px;
+	padding-right: 9px;
+	margin-right: 10px;
+	margin-top:8px;
+}
+ #mapCanvas {
+    width: 500px;
+    height: 300px;
+    margin-top:20px;
+    margin-left:-130px;
+     
+  }
+   @media(max-width:380px) {
+    #mapCanvas {
+        width:280px;
+        height:150px;
+        margin-top:20px;
+        margin-left:10px;
+         
+    }
+    
+}
+@media(max-width:380px){
+  .bg18{
+    max-width:100%;
+  }
+}
+ #infoPanel {
+     
+    margin-left: 10px;
+  }
+  #infoPanel div {
+    margin-bottom: 5px;
+  }
+  .new{
+  	font-family:"Sans",Verdana,"sans-serif";
+  	font-size:20px;
+  	text-align:center;
+
+  }
+  .bg1{
+  	margin-top:100px;
+}
+.bg1{
+	border:2px solid #f6f6f6;
+	border-radius:10px;
+	 
+	 
+}
+ .row_11{
+    padding-top: 10px;
+    padding-bottom: 10px;
+  font-family: "Sans",Verdana,'sans-serif';
+  font-weight:bold;
+  font-size:1.5em;
+/*  background: #ffffff;*/
+    background: black;
+}
+.row_13{
+  background:#000000;
+   
+
+ }
+.row_13 i{
+    color: white;
+}
+ .social:hover {
+     -webkit-transform: scale(1.1);
+     -moz-transform: scale(1.1);
+     -o-transform: scale(1.1);
+ }
+ .social {
+     -webkit-transform: scale(0.8);
+     -moz-transform: scale(0.8);
+     -o-transform: scale(0.8);
+     -webkit-transition-duration: 0.5s;
+     -moz-transition-duration: 0.5s;
+     -o-transition-duration: 0.5s;
+ }
+ 
+ #social-fb:hover {
+     color: #3B5998;
+ }
+ #social-tw:hover {
+     color: #4099FF;
+ }
+ #social-gp:hover {
+     color: #d34836;
+ }
+ #social-em:hover {
+     color: #f39c12;
+ }
+ .bg1{
+  margin-top:50px;
+   
+ }
+ .bg18{
+  padding-top:20px;
+  margin-top:90px;
+ }
+ .row_12{
+  background-color: #000000;
+  color:#ffffff;
+  font-size:1.5em;
+  font-weight: bold;
+  font-family:"Sans",Verdana,"sans-serif";
+  text-align: center;
+  padding-bottom:10px;
+  margin-top:0px;
+}
+.col-md-2 a{
+/*  color:#000000;*/
+    color: white;
+ font-size: 15px;
+
+}
+.col-md-2 a:hover{
+  text-decoration:none;
+  color:#ff0000;
+
+}
+.bg1{
+  border:4px solid #d3d3d3;
+  border-radius:8px;
+   width:60%;
+   height:80%;
+   margin-left:19%;
+   margin-right:1%;
+   margin-bottom:10px;
+   border-bottom-margin:20px;
+   margin-top:110px;
+   box-shadow:6px 6px 6px 6px #d3d3d3;
+
+}
+@media(max-width:380px){
+  .bg1{
+    border-radius:2px solid #d3d3d3;
+    border-shadow:1px 1px 1px 1px #f7f7f7;
+    width:100%;
+    height:100%;
+    margin-left:-5px;
+    
+  }
+}
+.b1{
+  margin-left:80px;
+}
+  </style>
+  </head>
+ <body data-spy="scroll" data-target="#myScrollspy">
+	 <nav class="navbar navbar-fixed-top" role="navigation">
+	    <div class="container-fluid">
+	        <!-- add header -->
+	        <div class="navbar-header">
+	            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar1">
+	                <span class="sr-only">Toggle navigation</span>
+	                <span class="icon-bar"></span>
+	                <span class="icon-bar"></span>
+	                <span class="icon-bar"></span>
+	            </button>
+	            <a class="navbar-brand" href="../../../index.html"><img src="https://s3-us-west-2.amazonaws.com/halanx-web/logo.png" class="img-responsive img-circle" width="50" height="50"> </a>
+	            <a class="navbar-brand navbar-bg" href="../../../index.html">Halanx</a>
+	        </div>
+	        <!-- menu items -->
+	        <div class="collapse navbar-collapse" id="navbar1">
+	            <ul class="nav navbar-nav navbar-right">
+	               <button class="btn btn-danger btn-md pull-right" onclick="window.location='halanx-final/new1big-kfc/frontpage/login.php'"> Logout</button>
+	                
+	            </ul>
+	        </div>
+	    </div>
+	</nav>
+ 
+<div class="container-fluid bg1" name="toTop" id="toPos">
+
+  <div class="row">
+	<div class="col-lg-offset-3 col-md-offset-3 col-sm-offset-3"></div>
+      <div class="col-lg-offset-4 col-lg-4 col-md-offset-4 col-md-4 col-sm-offset-4 col-sm-4 col-xs-12">
+         <h1 class="new">Enter Delivery Location</h1>
+        </div>
+     </div>
+   
+
+
+<div class="row">
+  <div id="infoPanel">
+ 	 <input id="info" type="hidden" size="50" value=""/>
+      <div class="col-lg-offset-3 col-md-offset-3 col-sm-offset-3"></div>
+   		<div class="col-sm-offset-4 col-sm-4">
+   		  <div class="form-group">
+   		    <div class="input-group">
+   				<input id="searchTextField" class="form-control" type="text" placeholder="Enter Delivery Location">
+   				<span class="input-group-btn">
+   				<button class="btn btn-danger btn-md" type="button">
+   				<i class="glyphicon glyphicon-search"></i>
+   				</button>
+   				</span>
+   			</div>
+   			</div>
+<div id="mapCanvas"></div>
+                <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDXnunhscL2jKBg62KkqAhJwSMXhDoN9DE&libraries=places"></script>
+    <script>
+    var geocoder = new google.maps.Geocoder();       
+
+            function geocodePosition(pos) {
+                geocoder.geocode({
+                    latLng: pos
+                }, function(responses) {
+                    if (responses && responses.length > 0) {
+                        updateMarkerAddress(responses[0].formatted_address.replace(", Delhi","").split(", ").splice(-1,1));
+                    } else {
+                        updateMarkerAddress('Update!');
+                    }
+                });
+            }
+
+
+            function updateMarkerPosition(latLng) {
+                document.getElementById('info').value = [
+                    latLng.lat(),
+                    latLng.lng()
+                ].join(', ');
+                 
+               var obj={"Latitude":latLng.lat(),"Longitude":latLng.lng()};
+               localStorage.setItem("obj",JSON.stringify(obj));
+               console.log(localStorage.getItem("obj"));
+            }
+
+            function updateMarkerAddress(str) {
+                document.getElementById('searchTextField').value = str;
+            }
+
+            function initialize() {
+                var latLng = new google.maps.LatLng(28.6139,77.2090);
+                var map = new google.maps.Map(document.getElementById('mapCanvas'), {
+                    zoom: 6,
+                    center: latLng,
+                    mapTypeId: google.maps.MapTypeId.ROADMAP,
+                    streetViewControl: false,
+                    mapTypeControl: false
+                   
+                });
+                var marker = new google.maps.Marker({
+                    position: latLng,
+                    map: map,
+                    draggable: true,
+                    title:"Drag marker to set position"
+                });
+                
+                var input = document.getElementById('searchTextField');
+        var autocomplete = new google.maps.places.Autocomplete(input);
+
+        autocomplete.bindTo('bounds', map);
+
+                // Update current position info.
+                updateMarkerPosition(latLng);
+                //geocodePosition(latLng);
+
+                // Add dragging event listeners.
+                google.maps.event.addListener(marker, 'dragstart', function() {
+                    updateMarkerAddress('Dragging...');
+                });
+
+                google.maps.event.addListener(marker, 'drag', function() {
+                    updateMarkerPosition(marker.getPosition());
+                });
+
+                google.maps.event.addListener(marker, 'dragend', function() {
+                    geocodePosition(marker.getPosition());
+                });
+                
+                google.maps.event.addListener(autocomplete, 'place_changed', function() {
+                    input.className = '';
+          var place = autocomplete.getPlace();
+          if (!place.geometry) {
+            // Inform the user that the place was not found and return.
+            input.className = 'notfound';
+            return;
+          }
+
+          // If the place has a geometry, then present it on a map.
+          if (place.geometry.viewport) {
+            map.fitBounds(place.geometry.viewport);
+          } else {
+            map.setCenter(place.geometry.location);
+            map.setZoom(17);  // Why 17? Because it looks good.
+          }
+            marker.setPosition(place.geometry.location);
+updateMarkerPosition(marker.getPosition());
+//geocodePosition(marker.getPosition());
+         
+        });
+            }
+
+            // Onload handler to fire off the app.
+            google.maps.event.addDomListener(window, 'load', initialize);
+    </script>
+
+
+
+
+
+
+
+</div>
+</div>
+</div>
+
+<div class="row">
+	 <div class="col-lg-offset-6 col-md-offset-6 col-sm-offset-6"></div>
+	  <div class="col-sm-offset-4 col-sm-4">
+		<h1 class="new">Enter Delivery Address</h1>
+	  </div>
+</div>
+
+	   <div class="row">
+	    <div class="col-lg-offset-4 col-md-offset-4 col-sm-offset-4"></div>
+	       <div class="col-sm-offset-4 col-sm-4">
+	   	   
+		 	<form method="post" action="https://www.halanx.com/halanx-final/new1big-kfc/summary/summary.html">
+			   
+			  <div class="form-group">
+				 <div class="input-group">
+        		 <label for="Housenumber">House/Flat No:</label>
+				  <input type="text" class="form-control" id="flatnumber" size="50" required>
+			    </div>
+			     
+
+				 
+
+				<div class="form-group">
+				<div class="input-group">
+        			<label for="Area">Area</label>
+					 <input type="text" class="form-control" id="area" size="50" required>
+			    </div>
+			    </div>
+
+				<div class="form-group">
+					<div class="input-group">
+        			<label for="City">City</label>
+				<input type="text" class="form-control" id="city"  size="50" required>
+			     </div>
+			     </div>
+
+				<button type="submit" class="btn btn-danger btn-md b1" id="submit" >Continue</button>
+         </form>
+</div>
+</div>
+         </div>
+         </div>
+
+          <div class="container-fluid bg18">
+  <div class="row row_11">
+    <div class="col-md-2 col-sm-8 col-xs-12 text-center"><a href="../../../aboutus.html">About Us</a></div>
+    <div class="col-md-2 col-sm-8 col-xs-12 text-center"><a href="#">Careers</a></div>
+    <div class="col-md-2 col-sm-8 col-xs-12 text-center"><a href="#">Blog</a></div>
+    <div class="col-md-2 col-sm-8 col-xs-12 text-center"><a href="../../../contactus.html">Contact Us</a></div>
+    <div class="col-md-2 col-sm-8 col-xs-12 text-center"><a href="../../../privacy.html">Privacy</a></div>
+    <div class="col-md-2 col-sm-8 col-xs-12 text-center"><a href="../../../terms.html">Terms</a></div>
+  </div>
+
+  <div class="row row_13">
+    <div class="text-center center-block">
+      <a href="https://www.facebook.com/halanxtech"><i id="social-fb" class="fa fa-facebook-square fa-2x social"></i></a>
+      <a href="https://www.twitter.com/halanxtech"><i id="social-tw" class="fa fa-twitter-square fa-2x social"></i></a>
+      <a href="https://www.instagram.com/halanxtech"><i id="social-gp" class="fa fa-instagram fa-2x social"></i></a>
+       <a href="https://in.linkedin.com/company/halanx"><i id="social-tw" class="fa fa-linkedin-square fa-2x social"></i></a>
+
+
+   </div>
+  </div>
+
+
+   <div class="row row_12">
+  <span class="glyphicon glyphicon-copyright-mark"> Halanx 2017 </span>
+   </div>
+</div>
+         
+
+          <script>
+     $(document).ready(function(){
+     $("#submit").click(function(){
+
+      var Address= new Object();
+      Address.Flatno=$('#flatnumber').val();
+      Address.Area=$('#area').val();
+      Address.city=$('#city').val();
+       
+      localStorage.setItem("Address",JSON.stringify(Address));
+     });
+   });
+
+     </script>
+ 
+</div>
+ <script>
+ $(function(){
+    var navbar = $('.navbar');
+    $(window).scroll(function(){
+        if($(window).scrollTop() <= 40){
+          navbar.css('box-shadow', 'none');
+        } else {
+          navbar.css('box-shadow', '0px 10px 20px rgba(0, 0, 0, 0.4)'); 
+        }
+    });  
+})
+$(function(){
+
+  // name your elements here
+  var stickyElement   = '.panel-affix',   // the element you want to make sticky
+    bottomElement   = '#fake-footer'; // the bottom element where you want the sticky element to stop (usually the footer) 
+
+  // make sure the element exists on the page before trying to initalize
+  if($( stickyElement ).length){
+    $( stickyElement ).each(function(){
+
+      // let's save some messy code in clean variables
+      // when should we start affixing? (the amount of pixels to the top from the element)
+      var fromTop = $( this ).offset().top, 
+        // where is the bottom of the element?
+        fromBottom = $( document ).height()-($( this ).offset().top + $( this ).outerHeight()),
+        // where should we stop? (the amount of pixels from the top where the bottom element is)
+        // also add the outer height mismatch to the height of the element to account for padding and borders
+        stopOn = $( document ).height()-( $( bottomElement ).offset().top)+($( this ).outerHeight() - $( this ).height()); 
+
+      // if the element doesn't need to get sticky, then skip it so it won't mess up your layout
+      if( (fromBottom-stopOn) > 200 ){
+        // let's put a sticky width on the element and assign it to the top
+        $( this ).css('width', $( this ).width()).css('top', 0).css('position', '');
+        // assign the affix to the element
+        $( this ).affix({
+          offset: { 
+            // make it stick where the top pixel of the element is
+            top: fromTop - 80,  
+            // make it stop where the top pixel of the bottom element is
+            bottom: stopOn
+          }
+        // when the affix get's called then make sure the position is the default (fixed) and it's at the top
+        }).on('affix.bs.affix', function(){ $( this ).css('top', '80px').css('position', ''); });
+      }
+      // trigger the scroll event so it always activates 
+      $( window ).trigger('scroll'); 
+    }); 
+  }
+
+});
+
+//Offset scrollspy height to highlight li elements at good window height
+$('body').scrollspy({
+  offset: 80
+});
+
+//Smooth Scrolling For Internal Page Links
+$(function() {
+  $('a[href*=#]:not([href=#])').click(function() {
+  if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
+    var target = $(this.hash);
+    target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
+    if (target.length) {
+    $('html,body').animate({
+      scrollTop: target.offset().top
+    }, 1000);
+    return false;
+    }
+  }
+  });
+});
+
+
+
+ </script>
+  
+</body>
+</html>
