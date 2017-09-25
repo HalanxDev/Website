@@ -1,6 +1,72 @@
- .navbar-fixed-top{
-    background-color:#ffffff;
+/********************************/
+/** Navbar **/
+.navbar-fixed-top {
+    background-color: #fff;
+    box-shadow: 0 0 5px rgba(0,0,0,0.19), 0 0 11px rgba(0,0,0,0.1);
 }
+
+.navbar {    
+    z-index: 1000;  
+    border-bottom: 1px solid #e1e1e1;
+}
+
+.navbar-bg {
+   	color: #e50000;
+    font-family: 'Titillium Web', sans-serif;
+    font-weight: 700;
+  	font-size: 2.2em;
+    /*font-family: ff-clan-web-pro,"Helvetica Neue",Helvetica,sans-serif;*/
+}
+
+.navbar-brand {
+    padding: 20px;
+    padding-bottom: 40px;
+    padding-left: 10px;
+    margin-bottom: -1px;
+    border-right: 1px solid #d5d5d5;
+}
+
+.navbar-bg:hover {
+   	color: #e50000;
+    background: #e1e1e1;
+}
+
+.navbar-brand img {
+    float: left;
+    margin-right: -5px;
+}
+
+#login-btn {
+    text-decoration: none;
+    background: #f1413e;
+    margin-top: 0px;
+    margin-bottom: -1px;
+    padding: 20px 35px;
+    color: #f1f1f1;
+    margin-right: 0px;
+}
+
+@media(max-width:767px){
+    
+    .bg1 .row_2 .col-sm-12{
+        margin-top: -30px;
+    }
+    
+    .login_ctrl{
+        position: absolute;
+        top: -8px;
+        right: 15px;
+    }
+    
+    nav{
+        position: relative;
+    }    
+}
+
+#login-btn:hover {
+    background: #cc0a06;
+}
+
 .img-responsive{
      margin-top: -15px;
 }
@@ -45,19 +111,7 @@ z-index:1000; /* lift .navbar above #top-shadow */
     font-family:ff-clan-web-pro,"Helvetica Neue",Helvetica,sans-serif;
     font-weight:bold;
 }
-.navbar-bg{
-    color: #e50000;
-    font-family:ff-clan-web-pro,"Helvetica Neue",Helvetica,sans-serif;
-    font-weight:bold;
-    font-size:2.5em;
-}
-.navbar-bg a{
-  text-decoration:none;
-  cursor:pointer;
-}
-.navbar-bg a:hover{
-  color:#ff0000;
-}
+
 .pull-right{
   padding-right: 8px;
   margin-right: 10px;
@@ -78,22 +132,14 @@ z-index:1000; /* lift .navbar above #top-shadow */
 
 }
 .row_2{
-    margin-top:30px;
+/*    margin-top:30px;*/
 	color: #000000;
   	font-family: ff-clan-web-pro,"Helvetica Neue",Helvetica,sans-serif;
   	 
-  	font-size:20px;
+  	font-size:12px !important;
   	text-align:center;
 }
-.row_11{
-  padding-top: 10px;
-  padding-bottom: 10px;
-	font-family:  ff-clan-web-pro,"Helvetica Neue",Helvetica,sans-serif;
-	 
-	font-size:20px;
-/*	background: #ffffff;*/
-    background: black;
-}
+
 .row_13{
  	background:#000000;
  	 
@@ -170,6 +216,7 @@ z-index:1000; /* lift .navbar above #top-shadow */
 }
 .row_2 h2{
     font-family:cursive;
+    font-size: 26px !important;
 }
 .row_2 .image2 img{
     width: 29%;
@@ -184,4 +231,89 @@ z-index:1000; /* lift .navbar above #top-shadow */
     font-family:ff-clan-web-pro,"Helvetica Neue",Helvetica,sans-serif;
     color:black;
   }
+}
+
+/******************************************/
+/**Banner**/
+#banner img {
+    width: 100%;
+    box-shadow: 0 0 12px rgba(0,0,0,0.2), 0 0 5px rgba(0,0,0,0.35);
+}
+
+/*****************************************/
+/**Page Content**/
+.content {
+    padding: 70px 10px;
+    margin-bottom: 15px;
+    background: #fff;
+    margin-bottom: 0px;
+    border-bottom: 1px solid #d5d5d5;
+}
+
+.content:nth-child(2) {
+    background: #e8e8e8;
+}
+
+.content img {
+    border-radius: 2px;
+    box-shadow: 0 0 9px -1px rgba(0,0,0,0.5);
+}
+
+.content:last-child {
+    border-bottom: none;
+    margin-bottom: -30px;
+}
+
+.content h3 {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+    color: #222;
+}
+
+/******************************************/
+/**Footer**/
+footer {
+    margin-top: 30px;
+}
+
+footer .row_11 {
+    padding: 14px 0;
+    padding-bottom: 10px;
+    background: #333;
+    box-shadow: 0px 1px 1px rgba(0,0,0,0.3) inset;
+}
+
+footer .row_11 a {
+    color: #999;
+    font-family: 'Roboto', sans-serif;
+}
+
+footer .row_11 a:hover {
+    color: #f1f1f1;
+}
+
+footer .row_11 a:focus {
+    text-decoration: none;
+}
+
+
+footer .row_13 {
+    padding: 10px;
+    background: #333;
+}
+
+footer .row_13 a {
+    text-decoration: none;
+    color: #fff;
+}
+
+footer .row_12 {
+    padding: 12px;
+    background: #222;
+    font-family: 'Roboto', sans-serif;
+    font-size: 14px;
+}
+
+footer .row_12 p {
+    margin: 0;
 }
