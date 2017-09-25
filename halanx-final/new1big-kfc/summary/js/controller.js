@@ -10,10 +10,10 @@
                           promise.then(function(data){
                     console.log(data);
                               $scope.cost = data;
-                              var amount= data.TotalWithExtras;
-                              localStorage.setItem('amount',amount);
+                             // var amount= data.TotalWithExtras;
+                             // localStorage.setItem('amount',amount);
       },function(err){
-  
+                 alert("err");
     } );
     }
 })
