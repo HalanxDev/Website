@@ -28,82 +28,174 @@
 <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/jquery.bootstrapvalidator/0.5.2/css/bootstrapValidator.min.css"/>
 <script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/jquery.bootstrapvalidator/0.5.2/js/bootstrapValidator.min.js"></script>
 <link rel="stylesheet" href="contactus.css">
+<!--<link rel="stylesheet" href="panel.css">-->
 <style>
 
 </style>
+    
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Titillium+Web:400,600,700" rel="stylesheet">
 </head>
 <body>
 
 <body data-spy="scroll" data-target="#myScrollspy">
-<nav class="navbar navbar-default navbar-fixed-top">
-<div class="container-fluid">
-    <!--header-->
-    <div class="navbar-header">
-        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar1">
-            <span class="sr-only"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-        </button>
-        <a class="navbar-brand" href="index.html"><img src="https://s3-us-west-2.amazonaws.com/halanx-web/logo.png" class="img-responsive img-circle" width="50" height="50"> </a>
-        <a class="navbar-bg" href="index.html">Halanx</a>
-    </div>
-    <!-- menu items -->
-  
-</div>
-</nav>
+<!--Navbar Starts Here-->
+    <nav class="navbar navbar-fixed-top" role="navigation">
+        <div class="container-fluid">
+            
+            <!-- add header -->
+            <div class="navbar-header">
 
+               
+                <a class="navbar-brand navbar-bg" href="index.html">
+                    <img src="https://s3-us-west-2.amazonaws.com/halanx-web/logo.png" class="img-responsive" width="50" height="50"><span id="brand-name">Halanx</span>
+                </a>
+            </div>
+            
+            <!-- menu items -->
+<!--            <div  id="navbar1" style="margin-top:0px">-->
+                <ul class="nav login_ctrl navbar-nav navbar-right">
+                    <a href="halanx-final/new1big-kfc/frontpage/login.html" class="btn-md pull-right" id="login-btn">LOGIN</a>
+                </ul>
+<!--            </div>-->
+            
+        </div>
+    </nav>
+    <!--Navbar Ends-->
+<div style="padding-bottom:0px">
+<div >
+
+            
+<!--<div >-->
+
+
+<!-- Contact with Map - START -->
 <div class="container">
-<div class="row">
-<form role="form" id="contact-form" action="https://formspree.io/support@halanx.com" class="contact-form" method="POST">
-        <h1 class="new">For any queries,contact us</h1>
-          <div class="row"> 
-                   
-                  <div class="col-md-4 col-md-offset-2">
-                    <div class="form-group">
-                      <input type="text" class="form-control" name="Name" autocomplete="off" id="Name" placeholder="Enter your first name">
-                    </div>
-                   </div>
+    <div class="row">
+        <div class="col-md-6">
+            <div class="well well-sm">
+                <form class="form-horizontal" id="contact-form" action="https://formspree.io/support@halanx.com" class="contact-form" method="POST">
+                    <fieldset>
+                        <legend class="text-center header">Contact us</legend>
+                        <div class="form-group">
+                            <div class="col-md-10 col-md-offset-1">
+                                <input id="fname" name="name" type="text" placeholder="First Name" class="form-control">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="col-md-10 col-md-offset-1">
+                                <input id="lname" name="name" type="text" placeholder="Last Name" class="form-control">
+                            </div>
+                        </div>
 
-                    <div class="col-md-4">
-                    <div class="form-group">
-                      <input type="text" class="form-control" name="Name" autocomplete="off" id="Name" placeholder="Enter your last name">
-                    </div>
-                   </div>
-               </div>
+                        <div class="form-group">
+                            <div class="col-md-10 col-md-offset-1">
+                                <input id="email" name="email" type="text" placeholder="Email Address" class="form-control">
+                            </div>
+                        </div>
 
-                  <div class="row">
-                    <div class="col-md-4 col-md-offset-2">
-                      <div class="form-group">
-                        <input type="email" class="form-control" name="email" autocomplete="off" id="email" placeholder="Enter your email id">
-                      </div>
-                    </div>
-                  
+                        <div class="form-group">
+                            <div class="col-md-10 col-md-offset-1">
+                                <input id="phone" name="phone" type="text" placeholder="Phone" class="form-control">
+                            </div>
+                        </div>
 
-                   <div class="col-md-4">
-                      <div class="form-group">
-                        <input type="text" class="form-control" name="number" autocomplete="off" id="number" placeholder="Enter your mobile number">
-                      </div>
+                        <div class="form-group">
+                            <div class="col-md-10 col-md-offset-1">
+                                <textarea class="form-control" id="message" name="message" placeholder="Enter your massage for us here. We will get back to you within 2 business days." rows="7"></textarea>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <div class="col-md-12 text-center">
+                                <button type="submit" class="btn btn-primary btn-lg"><a style="color:white" href="www.halanx.com">Submit</a></button>
+                            </div>
+                        </div>
+                    </fieldset>
+                </form>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div>
+                <div class="panel panel-default">
+                    <div class="text-center header">Our Office</div>
+                    <div class="panel-body text-center">
+                        <h4>Address</h4>
+                        <div>
+                        Halanx Technologies Pvt Ltd
+                        A-8/8, 2nd Floor
+                        Sector-17, Rohini
+                        Delhi-110089
+                        </div>
+                        <hr>
+                        <div id="map1" class="map" style="position: relative; overflow: hidden;"><div style="height: 100%; width: 100%; position: absolute; top: 0px; left: 0px; background-color: rgb(229, 227, 223)"><div class="gm-err-container"><div class="gm-err-content"><div class="gm-err-icon"><img src="http://maps.gstatic.com/mapfiles/api-3/images/icon_error.png" draggable="false" style="user-select: none;"></div><div class="gm-err-title">Sorry! Something went wrong.</div><div class="gm-err-message">This page didn't load Google Maps correctly. See the JavaScript console for technical details.</div></div></div></div></div>
                     </div>
                 </div>
-                  
-                <div class="row">
-                  <div class="col-md-8 col-md-offset-2">
-                  <div class="form-group">
-                        <textarea class="form-control textarea" rows="3" name="Message" id="Message" placeholder="Message"></textarea>
-                  </div>
-                </div>
-                </div>
-                <div class="row">
-                <div class="col-md-8 col-md-offset-5">
-              <button type="submit" class="btn btn-md btn-danger b1">Send a message</button>
-              </div>
-              </div>
-            </form>
+            </div>
+        </div>
+    </div>
 </div>
+
+
+<!--<script src="http://maps.google.com/maps/api/js?sensor=false"></script>-->
+<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDXnunhscL2jKBg62KkqAhJwSMXhDoN9DE&libraries=places"></script>
+<!--  http://maps.google.com/maps?file=api&v=2&key=AIzaSyDXnunhscL2jKBg62KkqAhJwSMXhDoN9DE&libraries=places-->
+<script type="text/javascript">
+    jQuery(function ($) {
+        function init_map1() {
+            var myLocation = new google.maps.LatLng(28.742179, 77.119033);
+            var mapOptions = {
+                center: myLocation,
+                zoom: 16
+            };
+            var marker = new google.maps.Marker({
+                position: myLocation,
+                title: "Property Location"
+            });
+            var map = new google.maps.Map(document.getElementById("map1"),
+                mapOptions);
+            marker.setMap(map);
+        }
+        init_map1();
+    });
+</script>
+
+<!-- Contact with Map - END -->
+
+</div>        
+            
 </div>
+<!--</div>-->
 
+<!--Footer Starts Here-->
+    <footer class="container-fluid bg3">
+        <div class="row row_11">
+            <div class="col-md-3"></div>
+            <div class="col-md-1   text-center"><a href="aboutus.html">About Us</a></div>
+            <div class="col-md-1  text-center"><a href="#">Careers</a></div>
+            <div class="col-md-1  text-center"><a href="#">Blog</a></div>
+            <div class="col-md-1  text-center"><a href="../../../contactus.html">Contact Us</a></div>
+            <div class="col-md-1  text-center"><a href="privacy.html">Privacy</a></div>
+            <div class="col-md-1  text-center"><a href="terms.html">Terms</a></div>
+            <div class="col-md-3"></div>
+        </div>
 
+        <div class="row row_13">
+            <div class="text-center center-block">
+                <a href="https://www.facebook.com/halanxtech"><i id="social-fb" class="fa fa-facebook-square fa-2x social"></i> .</a>
+                <a href="https://www.twitter.com/halanxtech"><i id="social-tw" class="fa fa-twitter-square fa-2x social"></i> .</a>
+                <a href="https://www.instagram.com/halanxtech"><i id="social-gp" class="fa fa-instagram fa-2x social"></i> .</a>
+                <a href="https://in.linkedin.com/company/halanx"><i id="social-tw" class="fa fa-linkedin-square fa-2x social"></i></a>
+            </div>
+        </div>
+        
+        <div class="row row_12">
+            <p>&copy; Halanx 2017</p>
+        </div>
+    </footer>
+        <!--Footer Ends-->
+        
+<!--
 <div class="container-fluid bg3">
 <div class="row row_11">
 <div class="col-md-2   text-center"><a href="aboutus.html">About Us</a></div>
@@ -129,18 +221,10 @@
 <span class="glyphicon glyphicon-copyright-mark"> Halanx 2017 </span>
   </div>
   </div>
+-->
 </body>
 <script>
-$(function(){
-var navbar = $('.navbar');
-$(window).scroll(function(){
-    if($(window).scrollTop() <= 40){
-      navbar.css('box-shadow', 'none');
-    } else {
-      navbar.css('box-shadow', '0px 4px 20px rgba(0, 0, 0, 0.3)'); 
-    }
-});  
-})
+
 $('#contact-form').bootstrapValidator({
 //        live: 'disabled',
     message: 'This value is not valid',
@@ -177,4 +261,6 @@ $('#contact-form').bootstrapValidator({
     }
 });
 </script>
+<!--   <script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=false"></script>-->
+    </body>
 </html>
