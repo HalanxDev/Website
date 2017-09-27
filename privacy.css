@@ -256,6 +256,24 @@ font-weight:bold;
   margin-bottom:0px;
 }
 
+@media(max-width:767px){
+    
+    .bg1 .row_2 .col-sm-12{
+        margin-top: -30px;
+    }
+    
+    .login_ctrl{
+        position: absolute;
+        top: -8px;
+        right: 15px;
+    }
+    
+    nav{
+        position: relative;
+    }
+    
+    
+}
 
 /**Footer**/
 footer {

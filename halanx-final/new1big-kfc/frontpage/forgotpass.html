@@ -18,29 +18,30 @@
 </head>
 
 <body ng-app="myapp" ng-controller="myctrl">
+    <!--Navbar Starts Here-->
     <nav class="navbar navbar-fixed-top" role="navigation">
         <div class="container-fluid">
-             
+            
+            <!-- add header -->
             <div class="navbar-header">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar1">
-                     
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                <a class="navbar-brand" href="../../../index.html"><img src="https://s3-us-west-2.amazonaws.com/halanx-web/logo.png" class="img-responsive img-circle" width="50" height="50"> </a>
-                <a class="navbar-brand navbar-bg" href="../../../index.html">Halanx</a>
+
+               
+                <a class="navbar-brand navbar-bg" href="index.html">
+                    <img src="https://s3-us-west-2.amazonaws.com/halanx-web/logo.png" class="img-responsive" width="50" height="50"><span id="brand-name">Halanx</span>
+                </a>
             </div>
             
-             
-            <div class="collapse navbar-collapse" id="navbar1">
-                <ul class="nav navbar-nav navbar-right">
-                   <button class="btn btn-danger btn-md pull-right" onclick="window.location='https://www.halanx.com/halanx-final/new1big-kfc/frontpage/login.php'"> Login </button>
-                    
+            <!-- menu items -->
+<!--            <div  id="navbar1" style="margin-top:0px">-->
+                <ul class="nav login_ctrl navbar-nav navbar-right">
+                    <a href="halanx-final/new1big-kfc/frontpage/login.html" class="btn-md pull-right" id="login-btn">LOGIN</a>
                 </ul>
-            </div>
+<!--            </div>-->
+            
         </div>
     </nav>
+    <!--Navbar Ends-->
+
     
     <div class="container-fluid bg2">
         <div class="row">
@@ -73,29 +74,34 @@
         </div>
     </div>
 
-    <div class="container-fluid bg92">
+    <!--Footer Starts Here-->
+    <footer class="container-fluid bg3">
         <div class="row row_11">
-          <div class="col-md-2   text-center"><a href="../../../aboutus.html">About Us</a></div>
-          <div class="col-md-2  text-center"><a href="#">Careers</a></div>
-          <div class="col-md-2  text-center"><a href="#">Blog</a></div>
-          <div class="col-md-2  text-center"><a href="../../../contactus.html">Contact Us</a></div>
-          <div class="col-md-2  text-center"><a href="../../../privacy.html">Privacy</a></div>
-          <div class="col-md-2 text-center"><a href="../../../terms.html">Terms</a></div>
+            <div class="col-md-3"></div>
+            <div class="col-md-1   text-center"><a href="../../../aboutus.html">About Us</a></div>
+            <div class="col-md-1  text-center"><a href="#">Careers</a></div>
+            <div class="col-md-1  text-center"><a href="#">Blog</a></div>
+            <div class="col-md-1  text-center"><a href="../../../contactus.html">Contact Us</a></div>
+            <div class="col-md-1  text-center"><a href="../../../privacy.html">Privacy</a></div>
+            <div class="col-md-1  text-center"><a href="../../../terms.html">Terms</a></div>
+            <div class="col-md-3"></div>
         </div>
-       
-    <div class="row row_13">
-        <div class="text-center center-block">
-            <a href="https://www.facebook.com/halanxtech"><i id="social-fb" class="fa fa-facebook-square fa-2x social"></i></a>
-            <a href="https://www.twitter.com/halanxtech"><i id="social-tw" class="fa fa-twitter-square fa-2x social"></i></a>
-            <a href="https://www.instagram.com/halanxtech"><i id="social-gp" class="fa fa-instagram fa-2x social"></i></a>
-            <a href="https://in.linkedin.com/company/halanx"><i id="social-tw" class="fa fa-linkedin-square fa-2x social"></i></a>
-         </div>
-    </div>
-       
+
+        <div class="row row_13">
+            <div class="text-center center-block">
+                <a href="https://www.facebook.com/halanxtech"><i id="social-fb" class="fa fa-facebook-square fa-2x social"></i> .</a>
+                <a href="https://www.twitter.com/halanxtech"><i id="social-tw" class="fa fa-twitter-square fa-2x social"></i> .</a>
+                <a href="https://www.instagram.com/halanxtech"><i id="social-gp" class="fa fa-instagram fa-2x social"></i> .</a>
+                <a href="https://in.linkedin.com/company/halanx"><i id="social-tw" class="fa fa-linkedin-square fa-2x social"></i></a>
+            </div>
+        </div>
+        
+        
         <div class="row row_12">
-          <span class="glyphicon glyphicon-copyright-mark"> Halanx 2017 </span>
+            <p>&copy; Halanx 2017</p>
         </div>
-       </div>
+    </footer>
+<!--Footer Ends-->
        
 </body>
 </html>

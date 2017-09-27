@@ -90,6 +90,25 @@ display: none;
 top:0; 
 width:100%;
 }
+@media(max-width:767px){
+    
+    .bg1 .row_2 .col-sm-12{
+        margin-top: -30px;
+    }
+    
+    .login_ctrl{
+        position: absolute;
+        top: -8px;
+        right: 15px;
+    }
+    
+    nav{
+        position: relative;
+    }
+    
+    
+}
+
 
 /* UPDATE BELOW */
 .navbar{    

@@ -491,9 +491,8 @@ footer .row_12{
     nav{
         position: relative;
     }
-    
-    
 }
+
 @media(max-width:540px){
     .bg1 .row_3{
        padding-top: 10px;
@@ -804,7 +803,7 @@ svg {
 }
 .slide:nth-child(1) .slide__bg {
   left: 0;
-  background-image: url("home1.jpg");
+  background-image: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/142996/3d-slider-3.jpg");
 }
 .slide:nth-child(1) .slide__overlay-path {
   fill: #e99c7e;
@@ -819,7 +818,7 @@ svg {
 }
 .slide:nth-child(2) .slide__bg {
   left: -50%;
-  background-image: url("home2.jpg");
+  background-image: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/142996/3d-slider-2.jpg");
 }
 .slide:nth-child(2) .slide__overlay-path {
   fill: #e1ccae;
@@ -834,7 +833,7 @@ svg {
 }
 .slide:nth-child(3) .slide__bg {
   left: -100%;
-  background-image: url("home3.jpg");
+  background-image: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/142996/3d-slider-1.jpg");
 }
 .slide:nth-child(3) .slide__overlay-path {
   fill: #adc5cd;
@@ -849,7 +848,7 @@ svg {
 }
 .slide:nth-child(4) .slide__bg {
   left: -150%;
-  background-image: url("home1.jpg");
+  background-image: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/142996/3d-slider-4.jpg");
 }
 .slide:nth-child(4) .slide__overlay-path {
   fill: #cbc6c3;
@@ -1254,7 +1253,7 @@ svg {
 }
 .slide:nth-child(1) .slide__bg {
   left: 0;
-  background-image: url("home1.jpg");
+  background-image: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/142996/3d-slider-3.jpg");
 }
 .slide:nth-child(1) .slide__overlay-path {
   fill: #e99c7e;
@@ -1269,7 +1268,7 @@ svg {
 }
 .slide:nth-child(2) .slide__bg {
   left: -50%;
-  background-image: url("home2.jpg");
+  background-image: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/142996/3d-slider-2.jpg");
 }
 .slide:nth-child(2) .slide__overlay-path {
   fill: #e1ccae;
@@ -1284,7 +1283,7 @@ svg {
 }
 .slide:nth-child(3) .slide__bg {
   left: -100%;
-  background-image: url("home3.jpg");
+  background-image: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/142996/3d-slider-1.jpg");
 }
 .slide:nth-child(3) .slide__overlay-path {
   fill: #adc5cd;
@@ -1299,7 +1298,7 @@ svg {
 }
 .slide:nth-child(4) .slide__bg {
   left: -150%;
-  background-image: url("home1.jpg");
+  background-image: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/142996/3d-slider-4.jpg");
 }
 .slide:nth-child(4) .slide__overlay-path {
   fill: #cbc6c3;
@@ -1454,4 +1453,9 @@ center#cur-loc {
     font-size: 16px;
     height: 20px;
     z-index: 2;
+}
+
+
+.hover_red:hover{
+    color: red !important;
 }
