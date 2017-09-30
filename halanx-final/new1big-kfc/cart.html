@@ -14,35 +14,86 @@
 <script src="cartjs/cartmodule.js"></script>
 <script src="cartjs/cartfactory.js"></script>
 <script src="cartjs/cartcontroller.js"></script>
-
+ <link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Titillium+Web:400,600,700" rel="stylesheet">
 <style>
-.body{
-  background:#ffffff;
+body {
+    padding-top: 60px;
 }
-.navbar-fixed-top{
-    background-color:#ffffff;
+
+* {
+    transition: all 0.3s;
 }
-.icon-bar{
-  background:#d6d6d6;
+
+/** Navbar **/
+.navbar-fixed-top {
+    background-color: #fff;
+    box-shadow: 0 0 5px rgba(0,0,0,0.19), 0 0 11px rgba(0,0,0,0.1);
 }
-#content{
-    margin-top: 100px;
-     background:#ffffff;
+
+.navbar {    
+    z-index: 1000;  
+    border-bottom: 1px solid #e1e1e1;
 }
-.navbar-bg{
-  font-family:"Sans",Verdana,"sans-serif";
-  font-weight:bold;
-  font-size:2.5em;
-  color:#e50000;
-  margin-top:5px;
+
+.navbar-bg {
+   	color: #e50000;
+    font-family: 'Titillium Web', sans-serif;
+    font-weight: 700;
+  	font-size: 2.2em;
+    /*font-family: ff-clan-web-pro,"Helvetica Neue",Helvetica,sans-serif;*/
 }
-#header {
-  background: #fff;
-  border-bottom: 1px rgba(0, 0, 0, 0.07) solid;
-  z-index: 99;
-  &.--not-top {
-    box-shadow: 0 0 30px rgba(0, 0, 0, 0.1);
-  }
+
+.navbar-brand {
+    padding: 20px;
+    padding-bottom: 40px;
+    padding-left: 10px;
+    margin-bottom: -1px;
+    border-right: 1px solid #d5d5d5;
+}
+
+.navbar-bg:hover {
+   	color: #e50000;
+    background: #e1e1e1;
+}
+
+.navbar-brand img {
+    float: left;
+    margin-right: -5px;
+}
+
+#login-btn {
+    text-decoration: none;
+    background: #f1413e;
+    margin-top: 0px;
+    margin-bottom: -1px;
+    padding: 20px 35px;
+    color: #f1f1f1;
+    margin-right: 0px;
+}
+
+#login-btn:hover {
+    background: #cc0a06;
+}
+
+.img-responsive {
+    margin-top: -15px;
+}
+@media(max-width:767px){
+    
+    .bg1 .row_2 .col-sm-12{
+        margin-top: -30px;
+    }
+    
+    .login_ctrl{
+        position: absolute;
+        top: -8px;
+        right: 15px;
+    }
+    
+    nav{
+        position: relative;
+    }
 }
 * {
   transition-duration: 0.2s;
@@ -76,7 +127,8 @@ z-index:1000;
   margin-top:10px;
 }
 .form-group{
-  border-radius:5px;
+    margin-top: 25px;
+  border-radius:2px;
 
 }
 .new{
@@ -85,27 +137,33 @@ z-index:1000;
 }
  
 #content{
-  margin-top:100px;
-  border:2px solid #d3d3d3;
-  border-radius:8px;
+  border-radius: 2px;
   width:80%;
-  height:100%;
-  box-shadow:6px 6px 6px 6px #f7f7f7;
-  margin-left:150px;
-  
-  
-
+    margin: auto;
+    margin-top: 50px;
+    box-shadow: 0 1px 2px 0 rgba(0, 0, 0, .2);
 }
+    
+    @media(max-width: 767px) {
+        #content {
+            width: 91%;
+        }
+    }
+    
 .pull-right{
   padding-right: 8px;
   margin-right: 10px;
   margin-top:10px;
 }
-.amount{
-  background:#f6f6f6;
-  padding-bottom:5px;
-  margin-bottom:20px;
+#content .amount{
+  background:#f2f2f2;
+    width: 100%;
+    border-radius: 0;
+    border-top-left-radius: 2px;
+    border-top-right-radius: 2px;
+    margin-top: -1px;
 }
+    
  #social-fb:hover {
      color: #3B5998;
  }
@@ -140,24 +198,6 @@ z-index:1000;
     font-size: 15px;
 }
 
-.row_12{
-  background-color: #000000;
-  color:#ffffff;
-  font-size:15px;
-   
-  font-family:'Droid Sans', sans-serif;
-  text-align: center;
-  padding-top:10px;
-}
-
-.row_11{
-  padding-top:10px;
-  padding-bottom:10px;
-/*  background:#ffffff;*/
-       background-color: #000000;
-/*    border-bottom: 1px solid antiquewhite;*/
-}
-
 .social:hover {
      -webkit-transform: scale(1.1);
      -moz-transform: scale(1.1);
@@ -171,54 +211,143 @@ z-index:1000;
      -moz-transition-duration: 0.5s;
      -o-transition-duration: 0.5s;
  }
-@media(max-width:380px){
-  #content{
-    margin-left:-10px;
-    width:100%;
-    height:100%;
-    border:4px solid #f6f6f6;
-    border-radius:4px;
-  }
-}
-@media(max-width:380px){
-  .amount{
-    padding-bottom:-20px;
-  }
-}
+
+
 .bg18{
   margin-top:350px;
 }
 .row empty{
   margin-top:-40px;
 }
+    
+.form {
+    padding: 0;
+}
+    
+    .empty h1 {
+        font-family: 'Titillium Web', sans-serif;
+        color: #333;
+        font-size: 25px;
+    }
+    
+    .empty img {
+        width: 80px;
+        margin-bottom: 10px;
+    }
+
+     .deleteimage .delete-icon {
+        margin-right: 22px; 
+         cursor: pointer;
+         font-size: 22px;
+    }
+    
+    .btn-circle {
+        height: 30px;
+        width: 30px;
+        margin-top: -5px;
+    }
+    
+    .btn-circle span {
+        display: relative;
+        font-size: 16px;
+        display: inline-block;
+        border-radius: 50%;
+        padding: 7px;
+        margin-left: -5px;
+        top: -1px;
+    }
+    
+/*************************************/
+/**Footer**/
+footer {
+    margin-top: 30px;
+}
+
+footer .row_11 {
+    padding-top:10px;
+	padding-bottom:10px;
+    padding: 14px 0;
+    background-color: #333;
+    padding-bottom: 10px;
+    box-shadow: 0px 1px 1px rgba(0,0,0,0.3) inset;
+}
+
+footer .row_11 a {
+    color: #999;
+}
+
+footer .row_11 a:hover {
+    color: #f1f1f1;
+}
+
+footer .row_11 a:focus {
+    text-decoration: none;
+}
+
+
+footer .row_13 {
+    background: #333;
+    padding: 10px;
+}
+
+footer .row_13 a {
+    text-decoration: none;
+    color: #fff;
+}
+
+footer .row_12 {
+    padding: 12px;
+    background: #222;
+    font-family: 'Roboto', sans-serif;
+    font-size: 14px;
+}
+
+footer .row_12 p {
+    margin: 0;
+}
+
+footer .row_12 {
+    background: #2a2a2a;
+}
+
+footer .row_12{
+	background-color: #2a2a2a;
+	color:#ffffff;
+	font-size:15px;
+	text-align: center;
+	padding-top:10px;
+}
+
+footer .row_11{
+	padding-top:10px;
+	padding-bottom:10px;
+/*	background:#ffffff;*/
+    background-color: #333;
+/*    border-bottom: 1px solid antiquewhite;*/
+}
 </style>
 </head>
 <body ng-app="cartapp" ng-controller="cartctrl" data-spy="scroll" data-target="#myScrollspy">
- <div id="container">
-     <nav class="navbar navbar-fixed-top" role="navigation">
-    <div class="container-fluid bg2">
-        <!-- add header -->
-        <div class="navbar-header">
-            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar1">
-                
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-            </button>
-            <a class="navbar-brand" href="../../index.html"><img src="https://s3-us-west-2.amazonaws.com/halanx-web/logo.png" class="img-responsive img-circle" width="50" height="50"> </a>
-            <a class="navbar-brand navbar-bg" href="../../index.html">Halanx</a>
+    
+    <!---------------------->
+    <!--Navbar Starts Here-->
+    <nav class="navbar navbar-fixed-top" role="navigation">
+        <div class="container-fluid">
+            <!-- add header -->
+            <div class="navbar-header">
+                <a class="navbar-brand navbar-bg" href="../../index.html">
+                    <img src="https://s3-us-west-2.amazonaws.com/halanx-web/logo.png" class="img-responsive" width="50" height="50"><span id="brand-name">Halanx</span>
+                </a>
+            </div>
+            <!-- menu items -->
+            <!--<div  id="navbar1" style="margin-top:0px">-->
+                <ul class="nav login_ctrl navbar-nav navbar-right">
+                    <a href="../../halanx-final/new1big-kfc/frontpage/login.html" class="btn-md pull-right" id="login-btn">LOGIN</a>
+                </ul>
+            <!--</div>-->
         </div>
-        <!-- menu items -->
-         <div class="collapse navbar-collapse" id="navbar1">
-              <ul class="nav navbar-nav navbar-right">
-                 <button class="btn btn-danger btn-md pull-right" onclick="window.location='https://www.halanx.com/index.html'"> Logout</button>
-                  
-              </ul>
-          </div>
-         
-    </div>
-</nav>
- </div>
+    </nav>
+    <!--Navbar Ends-->
 
 
        
@@ -226,7 +355,7 @@ z-index:1000;
          <div class="container-fluid bg1" style="padding : 0px" name="toTop" id="toPos">
            <div class="row" ng-hide="cartclass">
               
-              <div class="col-lg-5 col-lg-offset-2 col-md-5 col-sm-12">
+              <div class="col-sm-12">
                 <div class="myproducts">
                   <ul>
         <li ng-repeat="list in cartproductlist track by $index">
@@ -244,7 +373,8 @@ z-index:1000;
             <button ng-click="updateplus(list)"  ng-model="hello" class="btn btn-xs btn-danger btn-circle"><span class="glyphicon glyphicon-plus"></span></button>
             </div>
           <div class="deleteimage">
-            <img src="images/Delete-48.png" ng-click="deleteproduct(list)" >
+<!--            <img src="images/Delete-48.png" ng-click="deleteproduct(list)" >-->
+              <span class="glyphicon glyphicon-trash delete-icon" ng-click="deleteproduct(list)"></span>
             </div>
             </div>
         </li>
@@ -252,7 +382,7 @@ z-index:1000;
     </ul> 
                       </div>
                   </div>
-                  <div class="col-lg-4 col-lf-offset-4 col-md-8 col-md-offset-1 col-sm-12">
+                  <div class="col-sm-12">
                     <div class="amount">
                    
         <h1 class="new">Your Amount</h1>
@@ -264,7 +394,7 @@ z-index:1000;
             </li>
         </ul>
 -->
-        <span>Total Amount:{{totalamount}}</span>
+        <span>Total Amount: {{totalamount}}</span>
       <div class="form">
                           <form  method="post" ng-submit="submitcart()" >
                               <input type="submit" value="Continue" >
@@ -283,47 +413,38 @@ z-index:1000;
           
            </div>
        </div>
- </div>
+    
+    <!---------------------->
+    <!--Footer Starts Here-->
+    <footer class="container-fluid bg3">
+        <div class="row row_11">
+            <div class="col-md-3"></div>
+            <div class="col-md-1   text-center"><a href="../../aboutus.html">About Us</a></div>
+            <div class="col-md-1  text-center"><a href="#">Careers</a></div>
+            <div class="col-md-1  text-center"><a href="#">Blog</a></div>
+            <div class="col-md-1  text-center"><a href="../../contactus.html">Contact Us</a></div>
+            <div class="col-md-1  text-center"><a href="../../privacy.html">Privacy</a></div>
+            <div class="col-md-1  text-center"><a href="../../terms.html">Terms</a></div>
+            <div class="col-md-3"></div>
+        </div>
+        <div class="row row_13">
+            <div class="text-center center-block">
+                <a href="https://www.facebook.com/halanxtech"><i id="social-fb" class="fa fa-facebook-square fa-2x social"></i> .</a>
+                <a href="https://www.twitter.com/halanxtech"><i id="social-tw" class="fa fa-twitter-square fa-2x social"></i> .</a>
+                <a href="https://www.instagram.com/halanxtech"><i id="social-gp" class="fa fa-instagram fa-2x social"></i> .</a>
+                <a href="https://in.linkedin.com/company/halanx"><i id="social-tw" class="fa fa-linkedin-square fa-2x social"></i></a>
+            </div>
+        </div>
+        <div class="row row_12">
+            <p>&copy; Halanx 2017</p>
+        </div>
+    </footer>
+    <!--Footer Ends-->
   
 
-<div class="container-fluid bg18">
-  <div class="row row_11">
-    <div class="col-md-2 col-sm-8 col-xs-12 text-center"><a href="../../aboutus.html">About Us</a></div>
-    <div class="col-md-2 col-sm-8 col-xs-12 text-center"><a href="#">Careers</a></div>
-    <div class="col-md-2 col-sm-8 col-xs-12 text-center"><a href="#">Blog</a></div>
-    <div class="col-md-2 col-sm-8 col-xs-12 text-center"><a href="../../contactus.html">Contact Us</a></div>
-    <div class="col-md-2 col-sm-8 col-xs-12 text-center"><a href="../../terms.html">Terms</a></div>
-    <div class="col-md-2 col-sm-8 col-xs-12 text-center"><a href="../../privacy.html">Privacy</a></div>
-  </div>
-
-  <div class="row row_13">
-    <div class="text-center center-block">
-      <a href="https://www.facebook.com/halanxtech"><i id="social-fb" class="fa fa-facebook-square fa-2x social"></i></a>
-      <a href="https://www.twitter.com/halanxtech"><i id="social-tw" class="fa fa-twitter-square fa-2x social"></i></a>
-      <a href="https://www.instagram.com/halanxtech"><i id="social-gp" class="fa fa-instagram fa-2x social"></i></a>
-       <a href="https://in.linkedin.com/company/halanx"><i id="social-tw" class="fa fa-linkedin-square fa-2x social"></i></a>
-
-
-   </div>
-  </div>
-
-
-   <div class="row row_12">
-  <span class="glyphicon glyphicon-copyright-mark"> Halanx 2017 </span>
-   </div>
-</div>
 </body>
 <script>
-$(function(){
-var navbar = $('.navbar');
-$(window).scroll(function(){
-    if($(window).scrollTop() <= 40){
-      navbar.css('box-shadow', 'none');
-    } else {
-      navbar.css('box-shadow', '0px 10px 20px rgba(0, 0, 0, 0.4)'); 
-    }
-});  
-})
+
 $(function(){
 var stickyElement   = '.panel-affix',    
 bottomElement   = '#fake-footer';  

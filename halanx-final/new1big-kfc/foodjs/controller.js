@@ -185,7 +185,7 @@ $scope.addstore = ()=>{
 
           
            
-      var promise =   myfactory.callfav(obj,val,token)
+      var promise =   myfactory.callfav(obj,mobilenumber,val,token)
                  promise.then(function(data){
         console.log(data)
 

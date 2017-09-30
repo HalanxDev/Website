@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"></script>
+    <script
+  src="https://code.jquery.com/jquery-3.2.1.min.js"
+  integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+  crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+</head>
+<body>
+  <div>
+      <a href="https://m.me/halanxtech?ref=Welcome%20message">
+          <i class="fa fa-comments" aria-hidden="true"></i>
+      </a>
+  </div>
+   <div class="slider-container">
+  <div class="slider-control left inactive"></div>
+  <div class="slider-control right"></div>
+  <ul class="slider-pagi"></ul>
+  <div class="slider">
+    <div class="slide slide-0 active">
+      <div class="slide__bg"></div>
+      <div class="slide__content">
+        <svg class="slide__overlay" viewBox="0 0 720 405" preserveAspectRatio="xMaxYMax slice">
+          <path class="slide__overlay-path" d="M0,0 150,0 500,405 0,405" />
+        </svg>
+        <div class="slide__text">
+          <h2 class="slide__text-heading">Project name 1</h2>
+          <p class="slide__text-desc">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Distinctio veniam minus illo debitis nihil animi facere, doloremque voluptate tempore quia. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Distinctio veniam minus illo debitis nihil animi facere, doloremque voluptate tempore quia.</p>
+          <a href="http://hkmbhutto.wix.com/abdulrasheed"
+          class="slide__text-link">Project link</a>
+        </div>
+      </div>
+    </div>
+    <div class="slide slide-1 ">
+      <div class="slide__bg"></div>
+      <div class="slide__content">
+        <svg class="slide__overlay" viewBox="0 0 720 405" preserveAspectRatio="xMaxYMax slice">
+          <path class="slide__overlay-path" d="M0,0 150,0 500,405 0,405" />
+        </svg>
+        <div class="slide__text">
+          <h2 class="slide__text-heading">Project name 2</h2>
+          <p class="slide__text-desc">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Distinctio veniam minus illo debitis nihil animi facere, doloremque voluptate tempore quia. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Distinctio veniam minus illo debitis nihil animi facere, doloremque voluptate tempore quia.</p>
+          <a href="http://hkmbhutto.wix.com/abdulrasheed" 
+          class="slide__text-link">Project link</a>
+        </div>
+      </div>
+    </div>
+    <div class="slide slide-2">
+      <div class="slide__bg"></div>
+      <div class="slide__content">
+        <svg class="slide__overlay" viewBox="0 0 720 405" preserveAspectRatio="xMaxYMax slice">
+          <path class="slide__overlay-path" d="M0,0 150,0 500,405 0,405" />
+        </svg>
+        <div class="slide__text">
+          <h2 class="slide__text-heading">Project name 3</h2>
+          <p class="slide__text-desc">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Distinctio veniam minus illo debitis nihil animi facere, doloremque voluptate tempore quia. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Distinctio veniam minus illo debitis nihil animi facere, doloremque voluptate tempore quia.</p>
+          <a href="http://hkmbhutto.wix.com/abdulrasheed"
+          class="slide__text-link">Project link</a>
+        </div>
+      </div>
+    </div>
+    <div class="slide slide-3">
+      <div class="slide__bg"></div>
+      <div class="slide__content">
+        <svg class="slide__overlay" viewBox="0 0 720 405" preserveAspectRatio="xMaxYMax slice">
+          <path class="slide__overlay-path" d="M0,0 150,0 500,405 0,405" />
+        </svg>
+        <div class="slide__text">
+          <h2 class="slide__text-heading">Project name 4</h2>
+          <p class="slide__text-desc">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Distinctio veniam minus illo debitis nihil animi facere, doloremque voluptate tempore quia. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Distinctio veniam minus illo debitis nihil animi facere, doloremque voluptate tempore quia.</p>
+          <a href="http://hkmbhutto.wix.com/abdulrasheed"
+          class="slide__text-link">Project link</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<script>
+    
+    
+
+$(document).ready(function() {
+  
+  var $slider = $(".slider"),
+      $slideBGs = $(".slide__bg"),
+      diff = 0,
+      curSlide = 0,
+      numOfSlides = $(".slide").length-1,
+      animating = false,
+      animTime = 500,
+      autoSlideTimeout,
+      autoSlideDelay = 6000,
+      $pagination = $(".slider-pagi");
+  
+  function createBullets() {
+    for (var i = 0; i < numOfSlides+1; i++) {
+      var $li = $("<li class='slider-pagi__elem'></li>");
+      $li.addClass("slider-pagi__elem-"+i).data("page", i);
+      if (!i) $li.addClass("active");
+      $pagination.append($li);
+    }
+  };
+  
+  createBullets();
+  
+  function manageControls() {
+    $(".slider-control").removeClass("inactive");
+    if (!curSlide) $(".slider-control.left").addClass("inactive");
+    if (curSlide === numOfSlides) $(".slider-control.right").addClass("inactive");
+  };
+  
+  function autoSlide() {
+    autoSlideTimeout = setTimeout(function() {
+      curSlide++;
+      if (curSlide > numOfSlides) curSlide = 0;
+      changeSlides();
+    }, autoSlideDelay);
+  };
+  
+  autoSlide();
+  
+  function changeSlides(instant) {
+    if (!instant) {
+      animating = true;
+      manageControls();
+      $slider.addClass("animating");
+      $slider.css("top");
+      $(".slide").removeClass("active");
+      $(".slide-"+curSlide).addClass("active");
+      setTimeout(function() {
+        $slider.removeClass("animating");
+        animating = false;
+      }, animTime);
+    }
+    window.clearTimeout(autoSlideTimeout);
+    $(".slider-pagi__elem").removeClass("active");
+    $(".slider-pagi__elem-"+curSlide).addClass("active");
+    $slider.css("transform", "translate3d("+ -curSlide*100 +"%,0,0)");
+    $slideBGs.css("transform", "translate3d("+ curSlide*50 +"%,0,0)");
+    diff = 0;
+    autoSlide();
+  }
+
+  function navigateLeft() {
+    if (animating) return;
+    if (curSlide > 0) curSlide--;
+    changeSlides();
+  }
+
+  function navigateRight() {
+    if (animating) return;
+    if (curSlide < numOfSlides) curSlide++;
+    changeSlides();
+  }
+
+
+  
+  $(document).on("click", ".slider-control", function() {
+    if ($(this).hasClass("left")) {
+      navigateLeft();
+    } else {
+      navigateRight();
+    }
+  });
+  
+  $(document).on("click", ".slider-pagi__elem", function() {
+    curSlide = $(this).data("page");
+    changeSlides();
+  });
+  
+});
+    
+    
+    </script> 
+</body>
+</html>

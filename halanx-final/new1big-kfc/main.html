@@ -3,7 +3,6 @@
 <head>
 <meta content="width=device-width, initial-scale=1.0" name="viewport" >
 <link rel="icon" type="image/png" sizes="16x16" href="logo.png">
-<link rel="stylesheet" href="main.css">
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
 <script src="https://npmcdn.com/tether@1.2.4/dist/js/tether.min.js"></script>
@@ -13,28 +12,54 @@
 <script src="js/module.js"></script>
 <script src="js/factory.js"></script>
 <script src="js/controller.js"></script>
+<link rel="stylesheet" href="main.css">
+     <link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Titillium+Web:400,600,700" rel="stylesheet">
 </head>
 
 
 <body ng-app="myapp" ng-controller="myctrl" data-spy="scroll" data-target="#myScrollspy">
-<nav class="navbar navbar-fixed-top" role="navigation">
-    <div class="navbar-header">
-        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar1">
-                
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-            </button>
-        <a class="navbar-brand" href="../../index.html"><img src="https://s3-us-west-2.amazonaws.com/halanx-web/logo.png" class="img-responsive img-circle" width="50" height="50"> </a>
-        <a class="navbar-brand navbar1" href="../../index.html">Halanx</a>
-    </div>
-    <!-- menu items -->
-    
 
-    </div>
-</nav>
+    <!---------------------->
+    <!--Navbar Starts Here-->
+    <nav class="navbar navbar-fixed-top" role="navigation">
+        <div class="container-fluid">
+            <!-- add header -->
+            <div class="navbar-header">
+                <a class="navbar-brand navbar-bg" href="../../../index.html">
+                    <img src="https://s3-us-west-2.amazonaws.com/halanx-web/logo.png" class="img-responsive" width="50" height="50"><span id="brand-name">Halanx</span>
+                </a>
+            </div>
+            <!-- menu items -->
+            <!--<div  id="navbar1" style="margin-top:0px">-->
+                <ul class="nav login_ctrl navbar-nav navbar-right">
+                    <a href="../../../halanx-final/new1big-kfc/frontpage/login.html" class="btn-md pull-right" id="login-btn">LOGOUT</a>
+                </ul>
+            <!--</div>-->
+        </div>
+    </nav>
+    <!--Navbar Ends-->
  
-  
+    <!------------------------------>
+    <!--Search Product Starts Here-->
+    <div class="container-fluid">
+        <div id="search-wrapper" class="row">
+            <h3>Search your products</h3>
+            <div class="col-sm-4"></div>
+            <div class="col-sm-4">
+                <div id="searchbox-wrapper">
+                    <input type="text" class="form-control" placeholder="Search your products" ng-change="search()" ng-model="enter">
+                     <ul>
+                        <li ng-repeat="i in listdata" data-toggle="modal" data-target="#exampleModalLong" ng-click="getsearch(i)">
+                            <a href="">{{i._source.ProductName}}</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-sm-4"></div>
+        </div>
+    </div>
+    <!--Search Store Ends-->
 
  <div id="content" name="toTop" id="toPos">
            <div class="container-fluid bg1" name="toTop" id="toPos">
@@ -45,8 +70,8 @@
                                <i class="fa fa-bars" aria-hidden="true"></i>
                          </span>
                        </div>
-                       <div class="userlist" ng-class={"move":movex}>
-                        <ul>
+                       <div id="menu_list" class="userlist" ng-class={"move":movex}>
+                        <ul style="height:inherit">
                             <li><a href="https://www.halanx.com/halanx-final/new1big-kfc/account/account.html">My Accounts</a></li>
                             <li><a href="https://www.halanx.com/halanx-final/new1big-kfc/orders/orders.html">My Orders</a></li>
                             <li><a href="https://www.halanx.com/halanx-final/new1big-kfc/favourites/fav1.html">Favourites</a></li>
@@ -61,10 +86,11 @@
                        <div class="delivery-option">
                            <ul>
                                
-                              <li><a href="" ng-click="addstore()">shopping in</a>
+                              <li>
+<!--                                  <a href="" ng-click="addstore()">shopping in</a>-->
                                 <div class="storelist" ng-class={"show":showclass}>
-                                  <ul>
-                                  <li ng-repeat="store in storedata" ng-click="mystore(store.id)">
+                                  <ul id="storename">
+                                  <li ng-repeat="store in storedata" ng-click="mystore(store.id)" >
                                       <a href="">{{store.StoreName}}</a>
                                   </li>
 
@@ -77,7 +103,7 @@
                            </ul>
                        </div>
                    </div>
-                   <div class=" col-sm-2 offset-lg-2 offset-md-1 col-3" >
+                   <div class="" >
                        <div class="cart-icon">
                           <a href="cart.html">
                    <button type="button" class="btn btn-md btn-danger b78"><i class="fa fa-shopping-cart" aria-hidden="true"></i>
@@ -87,18 +113,6 @@
                        </div>
                    </div>
                </div>
-               <div class="row">
-                <div class="col-md-4 col-md-offset-4 col-sm-12">
-               <div class="searchbox">
-    <input type="text" class="form-control" placeholder="Search your products" ng-change="search()" ng-model="enter">
-    <ul>
-        <li ng-repeat="i in listdata" data-toggle="modal" data-target="#exampleModalLong" ng-click="getsearch(i)">
-            <a href="">{{i._source.ProductName}}</a>
-        </li>
-    </ul>
-</div>
-</div>
-</div>
                <div class="row">
                    <div class="col-sm-12">
                        <div class="datalist">
@@ -191,46 +205,40 @@
        </div>
   </div>
 
-</div>
-  <div class="container-fluid bg3">
- <div class="row row_11">
-   <div class="col-md-2   text-center"><a href="../../aboutus.html">About Us</a></div>
-   <div class="col-md-2  text-center"><a href="#">Careers</a></div>
-   <div class="col-md-2  text-center"><a href="#">Blog</a></div>
-   <div class="col-md-2  text-center"><a href="../../contactus.html">Contact Us</a></div>
-   <div class="col-md-2  text-center"><a href="../../privacy.html">Privacy</a></div>
-   <div class="col-md-2 text-center"><a href="../../terms.html">Terms</a></div>
- </div>
-
- <div class="row row_13">
-   <div class="text-center center-block">
-        <a href="https://www.facebook.com/halanxtech"><i id="social-fb" class="fa fa-facebook-square fa-2x social"></i></a>
-      <a href="https://www.twitter.com/halanxtech"><i id="social-tw" class="fa fa-twitter-square fa-2x social"></i></a>
-      <a href="https://www.instagram.com/halanxtech"><i id="social-gp" class="fa fa-instagram fa-2x social"></i></a>
-      <a href="https://in.linkedin.com/company/halanx"><i id="social-tw" class="fa fa-linkedin-square fa-2x social"></i></a>
-    
-   </div>
- </div>
-
- <div class="row row_12">
-   <span class="glyphicon glyphicon-copyright-mark"> Halanx 2017 </span>
- </div>
-</div>
+    <!---------------------->
+    <!--Footer Starts Here-->
+    <footer class="container-fluid bg3">
+        <div class="row row_11">
+            <div class="col-md-3"></div>
+            <div class="col-md-1   text-center"><a href="../../../aboutus.html">About Us</a></div>
+            <div class="col-md-1  text-center"><a href="#">Careers</a></div>
+            <div class="col-md-1  text-center"><a href="#">Blog</a></div>
+            <div class="col-md-1  text-center"><a href="../../../contactus.html">Contact Us</a></div>
+            <div class="col-md-1  text-center"><a href="../../../privacy.html">Privacy</a></div>
+            <div class="col-md-1  text-center"><a href="../../../terms.html">Terms</a></div>
+            <div class="col-md-3"></div>
+        </div>
+        <div class="row row_13">
+            <div class="text-center center-block">
+                <a href="https://www.facebook.com/halanxtech"><i id="social-fb" class="fa fa-facebook-square fa-2x social"></i> .</a>
+                <a href="https://www.twitter.com/halanxtech"><i id="social-tw" class="fa fa-twitter-square fa-2x social"></i> .</a>
+                <a href="https://www.instagram.com/halanxtech"><i id="social-gp" class="fa fa-instagram fa-2x social"></i> .</a>
+                <a href="https://in.linkedin.com/company/halanx"><i id="social-tw" class="fa fa-linkedin-square fa-2x social"></i></a>
+            </div>
+        </div>
+        
+        <div class="row row_12">
+            <p>&copy; Halanx 2017</p>
+        </div>
+    </footer>
+    <!--Footer Ends-->
 
    
     
 </body>
 <script>
-$(function(){
-var navbar = $('.navbar');
-$(window).scroll(function(){
-    if($(window).scrollTop() <= 40){
-      navbar.css('box-shadow', 'none');
-    } else {
-      navbar.css('box-shadow', '0px 10px 20px rgba(0, 0, 0, 0.4)'); 
-    }
-});  
-})
+var menus = document.getElementById("menu_list");
+    menus.css('height','700px');
 $(function(){
 var stickyElement   = '.panel-affix',    
 bottomElement   = '#fake-footer';  

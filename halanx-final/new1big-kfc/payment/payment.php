@@ -62,7 +62,7 @@ $hash = $posted['hash'];
 $action = $PAYU_BASE_URL . '/_payment';
 }
 ?>
-
+<head>
 <script>
 var hash = '<?php echo $hash ?>';
 function submitPayuForm() {

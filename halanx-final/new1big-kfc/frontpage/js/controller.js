@@ -1,5 +1,9 @@
 app.controller("myctrl",($scope,myfactory)=>{
     storename();
+    $scope.movex=fale;
+    $scope.addsidebar = ()=>{
+        $scope.movex= !$scope.movex;
+    }
     function storename()
     {
         var promise = myfactory.callserver();
