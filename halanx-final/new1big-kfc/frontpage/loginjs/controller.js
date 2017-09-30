@@ -20,7 +20,8 @@ app.controller("myctrl",($scope, $window ,myfactory)=>{
                 if (data.key) {
                     
                    
-                    $window.location.href = "https://www.halanx.com/halanx-final/new1big-kfc/frontpage/index1.html";
+//                    $window.location.href = "https://www.halanx.com/halanx-final/new1big-kfc/frontpage/index1.html";
+                    $window.location.href = "../../new1big-kfc/frontpage/index1.html";
 
                 }
             },(err)=>{
